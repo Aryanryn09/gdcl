@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./textEditor.css";
 import { useQuill } from "react-quilljs";
 import "react-quill/dist/quill.snow.css";
+import { io } from "socket.io-client";
 function TextEditor() {
   const { quill, quillRef, Quill } = useQuill({ modules: { counter: true } });
+
+  useEffect(() => {
+    const socket = io("http://localhost:3001");
+    return () => {
+      // console.log("connected to socket . io");
+      socket.disconnect();
+    };
+  }, []);
 
   React.useEffect(() => {
     if (quill) {
