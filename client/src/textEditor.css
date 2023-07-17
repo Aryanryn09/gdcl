@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.textEditor {
+  width: 100%;
+  height: 11in;
+}
+.cls {
+  width: 100%;
+}
+.ql-container {
+  width: 8.8in;
+  height: 11in;
+  box-shadow: 0 0 5px;
+  margin: auto;
+}
+p {
+  padding: 1000px;
+}
